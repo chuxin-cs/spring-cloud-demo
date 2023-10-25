@@ -3,7 +3,7 @@ import { defaultSettings } from "@/config/layouts.js";
 const { showSettings, tagsView, fixedHeader, sidebarLogo } = defaultSettings;
 
 export default {
-  namespace: true,
+  namespaced: true,
   state: {
     theme: variables.theme,
     showSettings: showSettings,

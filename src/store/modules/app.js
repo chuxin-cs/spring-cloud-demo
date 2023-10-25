@@ -1,7 +1,7 @@
 import Cookies from "js-cookie";
 
 export default {
-  namespace: true,
+  namespaced: true,
   state: {
     sidebar: {
       opened: Cookies.get("sidebarStatus")

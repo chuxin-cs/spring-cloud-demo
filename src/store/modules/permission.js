@@ -1,7 +1,7 @@
 import { asyncRoutes, constantRoutes } from "@/router/modules";
 
 export default {
-  namespace: true,
+  namespaced: true,
   state: {
     routes: [],
     addRoutes: [],
@@ -13,10 +13,10 @@ export default {
     },
   },
   actions: {
-    generateRoutes({ commit }, roles) {
+    generateRoutes({ commit }) {
       return new Promise((resolve) => {
         commit("set_routes", asyncRoutes);
-        resolve(accessedRoutes);
+        resolve(asyncRoutes);
       });
     },
   },
