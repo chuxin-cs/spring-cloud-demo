@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import getters from "@/store/getters";
 
 Vue.use(Vuex);
 
@@ -16,6 +17,7 @@ function getModules() {
 
 export function createStore() {
     return new Vuex.Store({
+        getters,
         modules: getModules(),
     })
 }
