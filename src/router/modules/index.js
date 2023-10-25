@@ -15,20 +15,21 @@ export const constantRoutes = [
     ],
   },
   {
-    path: "/about",
+    path: "/about/",
+    redirect: "/about/list",
     component: Layout,
-    redirect: "/about",
+    meta: { title: "111" },
     children: [
       {
-        path: "",
-        name: "About",
+        path: "list",
+        name: "About1",
         component: () => import("@/pages/about/index"),
         meta: { title: "about", icon: "about", affix: true },
       },
       {
         path: "add",
-        name: "About",
-        component: () => import("@/pages/about/index"),
+        name: "About2",
+        component: () => import("@/pages/about/add.vue"),
         meta: { title: "aboutAdd", icon: "about", affix: true },
       },
     ],

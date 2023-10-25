@@ -27,7 +27,7 @@
 import { mapGetters } from "vuex";
 import Logo from "./Logo";
 import SidebarItem from "./SidebarItem";
-import variables from "@/styles/variables.scss";
+import variables from "@/styles/variables.module.scss";
 
 export default {
   components: { SidebarItem, Logo },
@@ -45,6 +45,7 @@ export default {
       return this.$store.state.settings.sidebarLogo;
     },
     variables() {
+      console.log(variables, "variables");
       return variables;
     },
     isCollapse() {
