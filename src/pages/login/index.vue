@@ -1,5 +1,8 @@
 <template>
-  <div>login</div>
+  <div>
+    <h1>login</h1>
+    <el-button>登录</el-button>
+  </div>
 </template>
 
 <script>

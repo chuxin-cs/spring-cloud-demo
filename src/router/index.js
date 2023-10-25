@@ -4,10 +4,11 @@ import routes from "./modules";
 
 Vue.use(VueRouter);
 
-const router = new VueRouter({
-  // mode: "history",
-  base: process.env.BASE_URL,
-  routes,
-});
+export function createRouter() {
+    return new VueRouter({
+        routes,
+        scrollBehavior: () => ({y: 0}),
+    })
+}
 
-export default router;
+export default createRouter;

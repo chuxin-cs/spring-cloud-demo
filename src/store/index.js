@@ -3,6 +3,21 @@ import Vuex from "vuex";
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
-  modules: {},
-});
+function getModules() {
+    const modulesFiles = require.context('./modules', true, /\.js$/)
+    const modules = modulesFiles.keys().reduce((modules, modulePath) => {
+        const moduleName = modulePath.replace(/^\.\/(.*)\.\w+$/, '$1')
+        const value = modulesFiles(modulePath)
+        modules[moduleName] = value.default
+        return modules
+    }, {})
+    return modules || {}
+}
+
+export function createStore() {
+    return new Vuex.Store({
+        modules: getModules(),
+    })
+}
+
+export default createStore;
