@@ -23,6 +23,7 @@
 
 <script>
 import { mapState } from "vuex";
+import RightPanel from "@/components/RightPanel";
 import { AppMain, Navbar, Settings, Sidebar, TagsView } from "./components";
 
 export default {
@@ -32,6 +33,7 @@ export default {
     Settings,
     Sidebar,
     TagsView,
+    RightPanel,
   },
   computed: {
     ...mapState({
