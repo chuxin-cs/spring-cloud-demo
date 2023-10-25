@@ -46,6 +46,8 @@
 </template>
 
 <script>
+import path from "path-browserify";
+
 import Item from "./Item";
 import AppLink from "./Link";
 import { isExternal } from "@/utils/validate";
@@ -99,7 +101,7 @@ export default {
       if (isExternal(this.basePath)) {
         return this.basePath;
       }
-      return this.basePath + routePath;
+      return path.resolve(this.basePath, routePath);
     },
   },
 };

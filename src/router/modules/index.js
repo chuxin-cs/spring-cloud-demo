@@ -15,8 +15,8 @@ export const constantRoutes = [
     ],
   },
   {
-    path: "/about/",
-    redirect: "/about/list",
+    path: "/about",
+    redirect: "/about",
     component: Layout,
     meta: { title: "111" },
     children: [
