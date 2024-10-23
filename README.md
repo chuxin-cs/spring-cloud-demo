@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://github.com/chuxin-cs" target="_blank">Spring Cloud Demo</a>
+  <a href="https://github.com/chuxin-cs" target="_blank">uni-chuxin</a>
 </h1>
 
 <p align="center">
