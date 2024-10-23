@@ -5,7 +5,6 @@ import user from "./modules/system/user";
 import globalConfig from "./modules/system/globalConfig";
 
 // 业务模块
-import zoom from "./modules/zoom/index";
 
 Vue.use(Vuex);
 
@@ -16,7 +15,6 @@ const store = new Vuex.Store({
     globalConfig,
 
     // 业务
-    zoom,
   },
 });
 
