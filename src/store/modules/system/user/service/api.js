@@ -4,7 +4,7 @@ import { get, post, uploadFile } from "@/chuxin/utils/request.js";
 // 登录
 export function login(data) {
   return post({
-    url: apiUrl + "/xiaoyu-biz/wechat/login",
+    url: apiUrl + "xxxxxxxxxx",
     data,
   });
 }
@@ -12,7 +12,7 @@ export function login(data) {
 // 获取用户信息
 export function getUserInfo(data) {
   return get({
-    url: apiUrl + "/xiaoyu-biz/userinfo/detail",
+    url: apiUrl + "xxxxxxxxxxxxxxx",
     data,
   });
 }
@@ -20,7 +20,7 @@ export function getUserInfo(data) {
 // 设置用户信息
 export function setUserInfo(data) {
   return post({
-    url: apiUrl + "/xiaoyu-biz/userinfo/update",
+    url: apiUrl + "xxxxxxxxxxxxxxx",
     data,
   });
 }
