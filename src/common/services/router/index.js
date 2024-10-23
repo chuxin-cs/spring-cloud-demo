@@ -1,11 +1,11 @@
-import { appendParamsToUrl, promisic } from "./util.js";
+import { appendParamsToUrl, promisic } from "@/common/utils/util.js";
 import {
   navigateTo,
   redirectTo,
   reLaunch as _reLaunch,
   switchTab as _switchTab,
   navigateBack,
-} from "../api/index.js";
+} from "@/common/api/index.js";
 
 export const navigate = (options) => {
   return new Promise((resolve, reject) => {
