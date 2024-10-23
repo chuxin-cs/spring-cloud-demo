@@ -1,11 +1,11 @@
-import { promisic } from "./util.js";
-import { apiUrl } from "../config/env.js";
+import { apiUrl } from "@/common/config/env.js";
+import { promisic } from "@/common/utils/util.js";
 import {
   request as _request,
   showToast,
   uploadFile as _uploadFile,
-} from "../api/index.js";
-import { getToken, removeToken, removeRefreshToken } from "./auth.js";
+} from "@/common/api/index.js";
+import { getToken, removeToken, removeRefreshToken } from "../auth/index.js";
 import { removeUserInfo } from "@/store/modules/system/user/service/storage.js";
 import store from "@/store"
 
