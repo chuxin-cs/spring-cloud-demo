@@ -1,6 +1,6 @@
 // 获取当前环境
-const env = process.env || {};
-const _NODE_ENV = env.NODE_ENV || '';
+const env = process?.env || {};
+const _NODE_ENV = env?.NODE_ENV || '';
 
 // 配置对象
 const envConfig = {

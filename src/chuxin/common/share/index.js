@@ -1,5 +1,5 @@
-import config from "../../config/index.js";
-import { fileUrl } from "@/chuxin/config/env.js";
+import {fileUrl} from "@/chuxin/env";
+import {shareConfig} from "@/chuxin/config";
 
 /**
  * 描述：分享给好友
@@ -10,14 +10,15 @@ import { fileUrl } from "@/chuxin/config/env.js";
  *    第2种：右上角点击分享
  */
 export function onShareAppMessage(options) {
-  const { title, path, imageUrl } = options || {};
-  let shareImageUrl = fileUrl + config.shareImageUrl;
-  return {
-    // 标题
-    title: title || config.title,
-    // 路径
-    path: path || config.path,
-    // 图片背景
-    imageUrl: imageUrl || shareImageUrl,
-  };
+    const {title, path, imageUrl} = options || {};
+    let shareImageUrl = fileUrl + shareConfig.imageUrl;
+
+    return {
+        // 标题
+        title: title || shareConfig.title,
+        // 路径
+        path: path || shareConfig.path,
+        // 图片背景
+        imageUrl: imageUrl || shareImageUrl,
+    };
 }
