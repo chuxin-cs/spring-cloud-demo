@@ -2,18 +2,6 @@ import {
     navigate, reLaunch, redirect, switchTab, back
 } from "./index.js";
 
-const navigateMap = {
-    1: navigate,
-    2: reLaunch,
-    3: redirect,
-    4: switchTab,
-    5: back,
-    "navigate": navigate,
-    "reLaunch": reLaunch,
-    "redirect": redirect,
-    "switchTab": switchTab,
-    "back": back
-}
 
 class ChuXinRouter {
     constructor(options) {
@@ -42,53 +30,54 @@ class ChuXinRouter {
         }, {});
     }
 
-    push(key, options = {}, navigateCallback) {
-        const route = this.get(key);
-        if (!route) {
-            let error_msg = `Route with key "${key}" not found.`
-            console.error(error_msg);
-            return Promise.reject(error_msg);
-        }
-        // 如果不存在 默认赋值为 navigate
-        if (!navigateCallback) navigateCallback = navigate;
-        //
-        if (typeof navigateCallback === 'string') {
-            navigateCallback = navigateMap[navigateCallback] || navigate;
-        }
-        // 传入的函数 暂时先不处理
-        if (typeof navigateCallback === 'function') {
-        }
-
-        return navigateCallback({
-            ...(options || {}), url: route.path,
-        });
+    /**
+     *  navigate
+     */
+    push(key, options = {}) {
+        return this.handleRouteAction(navigate, key, options);
     }
 
+    /**
+     *  back
+     */
     back(key, options = {}) {
-        const route = this.get(key);
-        if (!route) {
-            let error_msg = `Route with key "${key}" not found.`
-            console.error(error_msg);
-            return Promise.reject(error_msg);
-        }
-        return back({
-            ...(options || {}), url: route.path,
-        });
+        return this.handleRouteAction(back, key, options);
     }
 
+    /**
+     *  reLaunch
+     */
     replace(key, options = {}) {
+        return this.handleRouteAction(reLaunch, key, options);
+    }
+
+    /**
+     *  redirect
+     */
+    redirect(key, options = {}) {
+        return this.handleRouteAction(redirect, key, options);
+    }
+
+    /**
+     *  switchTab
+     */
+    switchTab(key, options = {}) {
+        return this.handleRouteAction(switchTab, key, options);
+    }
+
+    /**
+     *  公共方法，处理路由操作
+     */
+    handleRouteAction(action, key, options = {}) {
         const route = this.get(key);
         if (!route) {
-            let error_msg = `Route with key "${key}" not found.`
+            let error_msg = `Route with key "${key}" not found.`;
             console.error(error_msg);
             return Promise.reject(error_msg);
         }
 
-        return reLaunch({
-            ...(options || {}), url: route.path,
-        });
+        return action({...(options || {}), url: route.path});
     }
-
 }
 
 export function createRouter(options) {
