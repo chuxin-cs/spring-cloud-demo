@@ -1,5 +1,5 @@
 {
-  "name": "小鱼记账",
+  "name": "xxxxxxxxxxxxxxxxxxxx",
   "appid": "__UNI__0EFC5A5",
   "description": "",
   "versionName": "1.0.0",
@@ -65,7 +65,7 @@
     "plugins": {
       "WechatSI": {
         "version": "0.3.6",
-        "provider": "wx069ba97219f66d99"
+        "provider": ""
       }
     },
     "usingComponents": true,

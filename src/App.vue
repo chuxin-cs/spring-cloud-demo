@@ -1,11 +1,13 @@
 <script>
 export default {
   // 当uni-app 初始化完成时触发（全局只触发一次）
-  onLaunch: function () {
+  onLaunch () {
     this.init();
   },
-  onShow: function () {},
-  onHide: function () {},
+  // 页面打开
+  onShow() {},
+  // 页面关闭
+  onHide() {},
   methods: {
     init() {
       // #ifndef APP-NVUE
