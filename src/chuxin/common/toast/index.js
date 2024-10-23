@@ -1,4 +1,4 @@
-import { showModal } from "../../uni/index.js";
+import { showModal } from "@/chuxin/uni";
 
 export function Modal(options) {
   return new Promise((resolve, reject) => {
