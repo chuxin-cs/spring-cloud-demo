@@ -2,7 +2,7 @@ import {
   getStorageSync,
   setStorageSync,
   removeStorageSync,
-} from "../api/index.js";
+} from "../../api/index.js";
 
 const TokenKey = "chuxin-access-token";
 const RefreshTokenKey = "chuxin-refresh-token";
