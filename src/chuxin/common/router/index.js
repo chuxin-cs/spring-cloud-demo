@@ -49,7 +49,7 @@ function _navigate(callback, options) {
             ["query", "params"].forEach(key => delete options[key])
         }
 
-        promisic(navigateTo)({
+        promisic(callback)({
             complete: options.complete || (() => {
             }), ...options, url, success: resolve, fail: reject,
         });
