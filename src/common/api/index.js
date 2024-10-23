@@ -124,3 +124,10 @@ export const setNavigationBarTitle = _uni.setNavigationBarTitle;
  * uni-app地址：https://uniapp.dcloud.net.cn/api/key.html#onkeyboardheightchange
  */
 export const onKeyboardHeightChange = _uni.onKeyboardHeightChange;
+
+
+/**
+ * 微信地址：https://developers.weixin.qq.com/miniprogram/dev/api/ui/menu/wx.getMenuButtonBoundingClientRect.html
+ * uni-app：https://zh.uniapp.dcloud.io/api/ui/menuButton.html#getmenubuttonboundingclientrect
+ */
+export const getMenuButtonBoundingClientRect = _uni.getMenuButtonBoundingClientRect;

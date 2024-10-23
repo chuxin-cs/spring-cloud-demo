@@ -1,13 +1,4 @@
 /**
- * 微信地址：https://developers.weixin.qq.com/miniprogram/dev/api/ui/menu/wx.getMenuButtonBoundingClientRect.html
- * uni-app：https://zh.uniapp.dcloud.io/api/ui/menuButton.html#getmenubuttonboundingclientrect
- */
-export function getMenuButtonBoundingClientRect() {
-  const config = uni.getMenuButtonBoundingClientRect();
-  return config;
-}
-
-/**
  * @author 初心
  * @date 2021-03-31
  * @param {Function} fn 微信小程序API (wx.login、wx.request、wx.getUserInfo、wx.getSetting) 等
