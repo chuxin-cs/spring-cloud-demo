@@ -1,34 +1,49 @@
+import {tokenConfig} from "@/chuxin/config"
 import {
-  getStorageSync,
-  setStorageSync,
-  removeStorageSync,
-} from "../../api/index.js";
+    getStorageSync, setStorageSync, removeStorageSync,
+} from "@/chuxin/uni";
 
-const TokenKey = "chuxin-access-token";
-const RefreshTokenKey = "chuxin-refresh-token";
+const TokenKey = tokenConfig.TokenKey;
+const RefreshTokenKey = tokenConfig.RefreshTokenKey;
 
-// 获取token
+/**
+ * 获取token
+ */
 export function getToken() {
-  return getStorageSync(TokenKey);
-}
-// 设置token
-export function setToken(token) {
-  return setStorageSync(TokenKey, token);
-}
-// 删除token
-export function removeToken() {
-  return removeStorageSync(TokenKey);
+    return getStorageSync(TokenKey);
 }
 
-// 获取刷新toekn
+/**
+ * 设置token
+ */
+export function setToken(token) {
+    return setStorageSync(TokenKey, token);
+}
+
+/**
+ * 删除token
+ */
+export function removeToken() {
+    return removeStorageSync(TokenKey);
+}
+
+/**
+ * 获取刷新token
+ */
 export function getRefreshToken() {
-  return getStorageSync(RefreshTokenKey);
+    return getStorageSync(RefreshTokenKey);
 }
-// 设置刷新toekn
+
+/**
+ * 设置刷新token
+ */
 export function setRefreshToken(token) {
-  return setStorageSync(RefreshTokenKey, token);
+    return setStorageSync(RefreshTokenKey, token);
 }
-// 删除刷新toekn
+
+/**
+ * 删除刷新token
+ */
 export function removeRefreshToken() {
-  return removeStorageSync(RefreshTokenKey);
+    return removeStorageSync(RefreshTokenKey);
 }

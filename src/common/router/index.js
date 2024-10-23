@@ -1,4 +1,4 @@
-import {  reLaunch } from "@/chuxin/utils/router.js";
+import {  reLaunch } from "@/chuxin/common/router";
 
 /**
  * 首页
